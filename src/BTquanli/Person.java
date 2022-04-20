@@ -1,18 +1,24 @@
-package HoGiaDInh;
+package BTquanli;
 
 public class Person {
+    private int id;
     private String name;
     private int age;
-    private String job;
-    private int id;
 
     public Person() {
     }
 
-    public Person(String name, int age, String job, int id) {
+    public Person(int id, String name, int age) {
+        this.id = id;
         this.name = name;
         this.age = age;
-        this.job = job;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -32,31 +38,12 @@ public class Person {
         this.age = age;
     }
 
-    public String getJob() {
-        return job;
-    }
-
-    public void setJob(String job) {
-        this.job = job;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     @Override
     public String toString() {
         return "Person{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", age=" + age +
-                ", job='" + job + '\'' +
-                ", id=" + id +
                 '}';
     }
-
-
 }
